@@ -1,0 +1,84 @@
+{
+  "user": {
+    "id": "1",
+    "name": "John Doe",
+    "email": "johndoe@gmail.com",
+    "subscription": {
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "status": "active"
+    },
+    "apps": [
+      {
+        "id": "1",
+        "name": "Netflix",
+        "description": "Watch movies, TV shows, and more",
+        "catagories": ["entertainment"],
+        "subscription": {
+          "start_date": "2022-01-01",
+          "end_date": "2022-12-31",
+          "status": "active"
+        },
+        "plan": {
+          "name": "Standard",
+          "price": 14.99,
+          "features": ["HD available", "Watch on 2 screens at once"]
+        }
+      },
+      {
+        "id": "2",
+        "name": "Amazon Prime Video",
+        "description": "Watch movies, TV shows, and more",
+        "subscription": {
+          "start_date": "2022-01-01",
+          "end_date": "2022-12-31",
+          "status": "active"
+        },
+        "plan": {
+          "name": "Monthly",
+          "price": 8.99,
+          "features": [
+            "Unlimited streaming of movies and TV shows",
+            "Access to Prime Video Channels",
+            "Watch on 3 screens at once"
+          ]
+        }
+      },
+      {
+        "id": "3",
+        "name": "Spotify Premium",
+        "description": "Listen to music and podcasts",
+        "subscription": {
+          "start_date": "2022-01-01",
+          "end_date": "2022-12-31",
+          "status": "active"
+        },
+        "plan": {
+          "name": "Family",
+          "price": 14.99,
+          "features": [
+            "Up to 6 accounts",
+            "Ad-free music listening",
+            "Offline playback"
+          ]
+        }
+      },
+      {
+        "id": "4",
+        "name": "Medium",
+        "description": "Read important articles",
+        "catagories": ["news"],
+        "subscription": {
+          "start_date": "2022-01-01",
+          "end_date": "2022-12-31",
+          "status": "active"
+        },
+        "plan": {
+          "name": "Monthly",
+          "price": 9.99,
+          "features": ["HD available", "Watch on 2 screens at once"]
+        }
+      }
+    ]
+  }
+}

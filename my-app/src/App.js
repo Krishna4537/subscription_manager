@@ -18,12 +18,11 @@ function App() {
         <Container>
           <Routes>
             <Route path="/" element={<Home />} />
+
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/discover" element={<Discover />} />
             {/* <Route path="/search" component={Search} /> */}
           </Routes>
-
-          <h1>subscribe</h1>
         </Container>
       </div>
 

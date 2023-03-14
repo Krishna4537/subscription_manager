@@ -14,8 +14,11 @@ const RootBox = styled(Box)({
   width: "100%",
   position: "fixed",
   bottom: 0,
-  backgroundColor: "#2d313a",
   zIndex: 100,
+});
+
+const BottomNavigation2 = styled(BottomNavigation)({
+  backgroundColor: "#2d313a !important",
 });
 
 const useStyles = () => ({
@@ -42,12 +45,12 @@ export default function SimpleBottomNavigation() {
 
   useEffect(() => {
     // Reset the value of the BottomNavigation when the route changes
-    handleNavigation(null, 0);
+    //handleNavigation(null, 0);
   }, []);
 
   return (
     <RootBox>
-      <BottomNavigation value={0} onChange={handleNavigation} showLabels>
+      <BottomNavigation2 value={0} onChange={handleNavigation} showLabels>
         <BottomNavigationAction
           classes={{ label: classes.label }}
           label="Home"
@@ -68,7 +71,7 @@ export default function SimpleBottomNavigation() {
           label="Search"
           icon={<SearchIcon />}
         />
-      </BottomNavigation>
+      </BottomNavigation2>
       <Outlet />
     </RootBox>
   );
