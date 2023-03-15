@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import SingleContent from "../../components/SingleContent/SingleContent";
+import "./Discover.css";
 
 const Discover = () => {
   const [page, setPage] = useState(1);
@@ -39,21 +41,29 @@ const Discover = () => {
   return (
     <div>
       <span className="pageTitle">My Subscribed APPS</span>
-      <div className="subscribe">
+      <div className="discover">
         {content &&
           Object.keys(content).map((key, index) => (
-            <div key={index}>
+            <div className="Total" key={index}>
               <h1>
                 {key} : {content[key].total}
-              </h1>{" "}
+              </h1>
               <br />
               {content[key].apps.map((app) => (
-                <div key={app.id}>
-                  <img src="https:/via.placeholder.com/350x200" alt="product" />
-                  <h4>{app.name}</h4>
-                  <p>{app.plan.price}</p>
-                  <p>{app.plan.name}</p>
-                </div>
+                <SingleContent
+                  key={app.id}
+                  id={app.id}
+                  title={app.name}
+                  price={app.plan.price}
+                  plan_type={app.plan.name}
+                />
+
+                // <div key={app.id}>
+                //   <img src="https:/via.placeholder.com/350x200" alt="product" />
+                //   <h4>{app.name}</h4>
+                //   <p>{app.plan.price}</p>
+                //   <p>{app.plan.name}</p>
+                // </div>
               ))}
             </div>
           ))}

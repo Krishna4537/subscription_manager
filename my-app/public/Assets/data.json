@@ -12,8 +12,9 @@
       {
         "id": "1",
         "name": "Netflix",
+        "logo": "images/netflix-logo.png",
         "description": "Watch movies, TV shows, and more",
-        "catagories": ["entertainment"],
+        "catagories": ["Entertainment"],
         "subscription": {
           "start_date": "2022-01-01",
           "end_date": "2022-12-31",
@@ -28,6 +29,7 @@
       {
         "id": "2",
         "name": "Amazon Prime Video",
+        "logo": "images/prime-video.png",
         "description": "Watch movies, TV shows, and more",
         "subscription": {
           "start_date": "2022-01-01",
@@ -47,6 +49,7 @@
       {
         "id": "3",
         "name": "Spotify Premium",
+        "logo": "images/spotify-logo.png",
         "description": "Listen to music and podcasts",
         "subscription": {
           "start_date": "2022-01-01",
@@ -66,8 +69,9 @@
       {
         "id": "4",
         "name": "Medium",
-        "description": "Read important articles",
-        "catagories": ["news"],
+        "logo": "images/medium-logo.png",
+        "description": "collection of important articles",
+        "catagories": ["News"],
         "subscription": {
           "start_date": "2022-01-01",
           "end_date": "2022-12-31",

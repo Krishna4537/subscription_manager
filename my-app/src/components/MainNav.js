@@ -50,7 +50,7 @@ export default function SimpleBottomNavigation() {
 
   return (
     <RootBox>
-      <BottomNavigation2 value={0} onChange={handleNavigation} showLabels>
+      <BottomNavigation value={0} onChange={handleNavigation} showLabels>
         <BottomNavigationAction
           classes={{ label: classes.label }}
           label="Home"
@@ -71,7 +71,7 @@ export default function SimpleBottomNavigation() {
           label="Search"
           icon={<SearchIcon />}
         />
-      </BottomNavigation2>
+      </BottomNavigation>
       <Outlet />
     </RootBox>
   );

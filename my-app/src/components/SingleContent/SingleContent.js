@@ -1,21 +1,10 @@
-import { img_300, unavailable } from "../../config/config";
+import { img_300, unavailable } from "../../Config/Config";
 import "./SingleContent.css";
-import ContentModal from "../ContentModal/ContentModal";
+// import ContentModal from "../ContentModal/ContentModal";
 
-const SingleContent = ({
-  id,
-  poster,
-  title,
-  date,
-  media_type,
-  vote_average,
-}) => {
+const SingleContent = ({ id, poster, title, price, plan_type }) => {
   return (
-    <ContentModal media_type={media_type} id={id}>
-      <Badge
-        badgeContent={vote_average}
-        color={vote_average > 6 ? "primary" : "secondary"}
-      />
+    <div className="media" id={id}>
       <img
         className="poster"
         src={poster ? `${img_300}${poster}` : unavailable}
@@ -23,10 +12,10 @@ const SingleContent = ({
       />
       <b className="title">{title}</b>
       <span className="subTitle">
-        {media_type === "tv" ? "TV Series" : "Movie"}
-        <span className="subTitle">{date}</span>
+        {price}
+        <span className="subTitle">{plan_type}</span>
       </span>
-    </ContentModal>
+    </div>
   );
 };
 
