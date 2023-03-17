@@ -6,18 +6,20 @@
     "subscription": {
       "start_date": "2022-01-01",
       "end_date": "2022-12-31",
+      "Duration": 12,
       "status": "active"
     },
     "apps": [
       {
         "id": "1",
         "name": "Netflix",
-        "logo": "images/netflix-logo.png",
+        "logo": "/Assets/images/netflix-logo.png",
         "description": "Watch movies, TV shows, and more",
         "catagories": ["Entertainment"],
         "subscription": {
           "start_date": "2022-01-01",
-          "end_date": "2022-12-31",
+          "end_date": "2022-06-31",
+          "Duration": 6,
           "status": "active"
         },
         "plan": {
@@ -29,16 +31,18 @@
       {
         "id": "2",
         "name": "Amazon Prime Video",
-        "logo": "images/prime-video.png",
+        "logo": "/Assets/images/prime-video.png",
         "description": "Watch movies, TV shows, and more",
+        "catagories": ["Entertainment"],
         "subscription": {
           "start_date": "2022-01-01",
           "end_date": "2022-12-31",
+          "Duration": 12,
           "status": "active"
         },
         "plan": {
           "name": "Monthly",
-          "price": 8.99,
+          "price": 12.99,
           "features": [
             "Unlimited streaming of movies and TV shows",
             "Access to Prime Video Channels",
@@ -49,11 +53,13 @@
       {
         "id": "3",
         "name": "Spotify Premium",
-        "logo": "images/spotify-logo.png",
+        "logo": "/Assets/images/spotify-logo.png",
         "description": "Listen to music and podcasts",
+        "catagories": ["Music"],
         "subscription": {
           "start_date": "2022-01-01",
-          "end_date": "2022-12-31",
+          "end_date": "2022-07-31",
+          "Duration": 7,
           "status": "active"
         },
         "plan": {
@@ -68,13 +74,36 @@
       },
       {
         "id": "4",
+        "name": "Spotify free",
+        "logo": "/Assets/images/spotify-logo.png",
+        "description": "Listen to music and podcasts",
+        "catagories": ["Other"],
+        "subscription": {
+          "start_date": "2022-01-01",
+          "end_date": "2022-08-31",
+          "Duration": 8,
+          "status": "active"
+        },
+        "plan": {
+          "name": "Family",
+          "price": 14.99,
+          "features": [
+            "Up to 6 accounts",
+            "Ad-free music listening",
+            "Offline playback"
+          ]
+        }
+      },
+      {
+        "id": "5",
         "name": "Medium",
-        "logo": "images/medium-logo.png",
+        "logo": "/Assets/images/medium-logo.png",
         "description": "collection of important articles",
         "catagories": ["News"],
         "subscription": {
           "start_date": "2022-01-01",
-          "end_date": "2022-12-31",
+          "end_date": "2022-02-31",
+          "Duration": 1,
           "status": "active"
         },
         "plan": {

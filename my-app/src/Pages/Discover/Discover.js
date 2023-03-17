@@ -2,9 +2,11 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import SingleContent from "../../components/SingleContent/SingleContent";
+import { Grid } from "@mui/material";
 import "./Discover.css";
+import Loader from "../../components/Loader/Loader";
 
-const Discover = () => {
+const Discover = (props) => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState({});
 
@@ -38,36 +40,43 @@ const Discover = () => {
     // eslint-disable-next-line
   }, [page]);
 
-  return (
-    <div>
-      <span className="pageTitle">My Subscribed APPS</span>
-      <div className="discover">
-        {content &&
-          Object.keys(content).map((key, index) => (
-            <div className="Total" key={index}>
-              <h1>
-                {key} : {content[key].total}
-              </h1>
-              <br />
-              {content[key].apps.map((app) => (
-                <SingleContent
-                  key={app.id}
-                  id={app.id}
-                  title={app.name}
-                  price={app.plan.price}
-                  plan_type={app.plan.name}
-                />
-
-                // <div key={app.id}>
-                //   <img src="https:/via.placeholder.com/350x200" alt="product" />
-                //   <h4>{app.name}</h4>
-                //   <p>{app.plan.price}</p>
-                //   <p>{app.plan.name}</p>
-                // </div>
-              ))}
-            </div>
-          ))}
+  if (props.isLoading) {
+    return <Loader component={"Products"} />;
+  }
+  if (props.isUserLoggedIn) {
+    return (
+      <div>
+        <span className="pageTitle">Discover APPS</span>
+        <div className="discover1">
+          {content &&
+            Object.keys(content).map((key, index) => (
+              <div className="Total" key={index}>
+                <h1>
+                  {key} : {content[key].total} €
+                </h1>
+                <br />
+                <Grid container spacing={2}>
+                  {content[key].apps.map((app) => (
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={app.id}>
+                      <SingleContent
+                        id={app.id}
+                        title={app.name}
+                        poster={app.logo}
+                        price={app.plan.price}
+                        plan_type={app.plan.name}
+                      />
+                    </Grid>
+                  ))}
+                </Grid>
+              </div>
+            ))}
+        </div>
       </div>
+    );
+  }
+  return (
+    <div className="content" style={{ textAlign: "center" }}>
+      please Login to see discover
     </div>
   );
 };

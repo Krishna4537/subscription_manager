@@ -1,0 +1,11 @@
+.analyticsContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.analyticsFilters {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}

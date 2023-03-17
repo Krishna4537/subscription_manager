@@ -3,3 +3,10 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.filterButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}

@@ -1,24 +1,27 @@
 import { useEffect } from "react";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigation2 from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import HomeIcon from "@mui/icons-material/Home";
 import InsertChartIcon from "@mui/icons-material/InsertChart";
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import { useNavigate, Outlet } from "react-router-dom";
+// import { makeStyles } from "tss-react/mui";
 
 const RootBox = styled(Box)({
   width: "100%",
   position: "fixed",
   bottom: 0,
+  backgroundColor: "#282c34",
   zIndex: 100,
 });
 
-const BottomNavigation2 = styled(BottomNavigation)({
+const BottomNavigation = styled(BottomNavigation2)({
   backgroundColor: "#2d313a !important",
+  color: "white",
 });
 
 const useStyles = () => ({
@@ -39,7 +42,7 @@ export default function SimpleBottomNavigation() {
     } else if (newValue === 2) {
       navigate("/discover");
     } else if (newValue === 3) {
-      navigate("/search");
+      navigate("/profile");
     }
   };
 
@@ -68,8 +71,8 @@ export default function SimpleBottomNavigation() {
         />
         <BottomNavigationAction
           classes={{ label: classes.label }}
-          label="Search"
-          icon={<SearchIcon />}
+          label="Profile"
+          icon={<AccountCircleIcon />}
         />
       </BottomNavigation>
       <Outlet />

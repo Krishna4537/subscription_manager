@@ -15,6 +15,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
+    "recharts": "^2.4.3",
     "tss-react": "^4.7.5",
     "web-vitals": "^2.1.4"
   },
@@ -40,6 +41,21 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@cfaester/enzyme-adapter-react-18": "^0.7.0",
+    "babel-jest": "^29.5.0",
+    "enzyme": "^3.11.0",
+    "jest": "^27.5.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)"
     ]
   }
 }

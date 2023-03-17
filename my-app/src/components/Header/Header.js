@@ -1,9 +1,20 @@
 import "./Header.css";
+import Button from "../Button/Button";
 
-const Header = () => {
+const Header = ({ handleLogin, loggedIn, isLoading }) => {
   return (
     <span onClick={() => window.scroll(0, 0)} className="header">
-      📱 Subscription Mangement
+      <span>📱</span>
+      <span>Subscription Mangement</span>
+      <span>
+        <Button
+          isUserLoggedIn={loggedIn}
+          handleLogin={handleLogin}
+          isLoading={isLoading}
+          ifUserLoggedIn={"Logout"}
+          ifUserNotLoggedIn={"Login"}
+        />
+      </span>
     </span>
   );
 };
