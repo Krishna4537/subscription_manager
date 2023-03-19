@@ -14,7 +14,7 @@ describe("Loader Component", () => {
     const loader = wrapper.find(".loader");
     expect(loader.length).toBe(1);
   });
-  it("is rendered for products", () => {
+  it("is rendered for discover", () => {
     wrapper = component({ component: "Products" });
     const loader = wrapper.find(".loader");
     expect(loader.hasClass("loader_Products")).toBe(true);
